@@ -11,4 +11,8 @@ package garage;
  */
 public class Auto extends Vehicule{
     
+    public Auto(String nom) {
+        super(nom);
+    }
+    
 }

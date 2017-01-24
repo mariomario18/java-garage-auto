@@ -13,7 +13,7 @@ import java.util.ArrayList;
  */
 public class Garage extends ArrayList<VehiculeImmobilise>{
     
-    public toString(){
+    /*public toString(){
         return this.getSimpleName(); 
-    }
+    }*/
 }

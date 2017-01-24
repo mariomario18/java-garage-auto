@@ -6,6 +6,7 @@
 package garage;
 
 import java.util.ArrayList;
+import java.util.Scanner;
 
 /**
  *
@@ -20,8 +21,8 @@ public class Main {
         
         Garage g = new Garage();
         
-        Vehicule vehicule = new Vehicule();
-        Panne panne = new Panne();
+        Vehicule vehicule = new Vehicule("clio");
+        Panne panne = new Panne("pneu crevé");
         ArrayList tab = new ArrayList();
         tab.add(panne);
         
@@ -32,7 +33,42 @@ public class Main {
         //g.add(a);
         g.add(v);
         
-        System.out.println(g.toString());
+        System.out.println(g);
+        
+        int choix = -1;
+        
+        while(choix != 0){
+            System.out.println("\n\n--- MENU ---");
+            System.out.println("0. Quitter");
+            System.out.println("1. Voir le garage");
+            System.out.println("2. Ajouter un véhicule");
+
+            Scanner reader = new Scanner(System.in);
+            choix = reader.nextInt();
+            
+            switch(choix){
+                case 1:
+                    System.out.println(g);
+                    break;
+                case 2:
+                    System.out.println("\n--- Ajout d'un véhicule ---");
+                    System.out.println("Nom:");
+                    String nom = new Scanner(System.in).nextLine();
+                    System.out.println("Panne");
+                    String nomPanne = new Scanner(System.in).nextLine();
+                    
+                    Panne newPanne = new Panne(nomPanne);
+                    Vehicule a = new Vehicule(nom);
+                    ArrayList p = new ArrayList();
+                    p.add(newPanne);
+                    VehiculeImmobilise i = new VehiculeImmobilise(a, p, true);
+                    
+                    
+                    System.out.println(g);
+                    break;
+            }
+        }
+        
     }
     
 }

@@ -9,10 +9,11 @@ import java.util.ArrayList;
 
 /**
  *
- * @author youma
+ * @author mario
  */
 public class VehiculeImmobilise{
-    private Vehicule vehicule;
+    
+    private Vehicule vehicule;    
     private ArrayList<Panne> pannes;
     private boolean enPanne;
     
@@ -21,4 +22,17 @@ public class VehiculeImmobilise{
         this.pannes = pannes;
         this.enPanne = enPanne;
     }
+    
+    @Override
+    public String toString() {
+        return "Le véhicule est un(e) " + this.getNom()/* + " et la panne est: " + this.getPanne()*/;
+    }
+
+    private String getNom() {
+        return this.vehicule.getNom();
+    }
+
+    /*private String getPanne() {
+        
+    }*/
 }

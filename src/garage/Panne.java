@@ -11,4 +11,9 @@ package garage;
  */
 public class Panne{
     
+    String nom;
+    
+    public Panne(String nom){
+        this.nom = nom;
+    }
 }

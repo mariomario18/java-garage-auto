@@ -11,4 +11,13 @@ package garage;
  */
 public class Vehicule {
     
+    private String nom;
+    
+    public Vehicule(String nom){
+        this.nom = nom;
+    }
+
+    String getNom() {
+        return this.nom;
+    }
 }
