@@ -10,9 +10,9 @@ package garage;
  * @author youma
  */
 public class Auto extends Vehicule{
-    
-    public Auto(String nom) {
-        super(nom);
+ 
+    public Auto(String nom, boolean enPanne) {
+        super(nom, enPanne);
     }
-    
+ 
 }

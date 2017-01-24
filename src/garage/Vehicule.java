@@ -12,12 +12,21 @@ package garage;
 public class Vehicule {
     
     private String nom;
+    private boolean enPanne;
     
-    public Vehicule(String nom){
+    public Vehicule(String nom, boolean enPanne){
         this.nom = nom;
+        this.enPanne = enPanne;
     }
 
     String getNom() {
         return this.nom;
+    }
+
+    boolean demarrer() {
+        if (enPanne)
+            return false;
+        else
+            return true;
     }
 }

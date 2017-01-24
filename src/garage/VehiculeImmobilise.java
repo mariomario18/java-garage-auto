@@ -15,12 +15,11 @@ public class VehiculeImmobilise{
     
     private Vehicule vehicule;    
     private ArrayList<Panne> pannes;
-    private boolean enPanne;
+
     
-    public VehiculeImmobilise(Vehicule vehicule, ArrayList<Panne> pannes, boolean enPanne){
+    public VehiculeImmobilise(Vehicule vehicule, ArrayList<Panne> pannes){
         this.vehicule = vehicule;
         this.pannes = pannes;
-        this.enPanne = enPanne;
     }
     
     @Override
@@ -35,4 +34,8 @@ public class VehiculeImmobilise{
     /*private String getPanne() {
         
     }*/
+    
+    private boolean demarrer(){
+        return this.vehicule.demarrer();
+    }
 }

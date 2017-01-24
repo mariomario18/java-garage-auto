@@ -21,13 +21,13 @@ public class Main {
         
         Garage g = new Garage();
         
-        Vehicule vehicule = new Vehicule("clio");
+        Vehicule vehicule = new Vehicule("clio", true);
         Panne panne = new Panne("pneu crevé");
         ArrayList tab = new ArrayList();
         tab.add(panne);
         
         
-        VehiculeImmobilise v = new VehiculeImmobilise(vehicule, tab, true);
+        VehiculeImmobilise v = new VehiculeImmobilise(vehicule, tab);
         //VehiculeImmobilise a = new VehiculeImmobilise();
         
         //g.add(a);
@@ -58,10 +58,10 @@ public class Main {
                     String nomPanne = new Scanner(System.in).nextLine();
                     
                     Panne newPanne = new Panne(nomPanne);
-                    Vehicule a = new Vehicule(nom);
+                    Vehicule a = new Vehicule(nom, true);
                     ArrayList p = new ArrayList();
                     p.add(newPanne);
-                    VehiculeImmobilise i = new VehiculeImmobilise(a, p, true);
+                    VehiculeImmobilise i = new VehiculeImmobilise(a, p);
                     
                     
                     System.out.println(g);

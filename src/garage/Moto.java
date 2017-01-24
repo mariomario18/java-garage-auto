@@ -11,8 +11,14 @@ package garage;
  */
 public class Moto extends Vehicule{
     
-    public Moto(String nom) {
-        super(nom);
+    public Moto(String nom, boolean enPanne) {
+        super(nom, enPanne);
     }
+    
+    /**
+     *
+     * @param nom
+     */
+
     
 }

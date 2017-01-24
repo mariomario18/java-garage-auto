@@ -9,12 +9,6 @@ package garage;
  *
  * @author youma
  */
-public class Panne{
+public class Piece {
     
-    String nom;
-    Piece pieceNecessaire;
-    
-    public Panne(String nom, Piece pieceNecessaire){
-        this.nom = nom;
-    }
 }
